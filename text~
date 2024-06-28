@@ -1,1 +1,0 @@
-A user has an ID and can subscribe to only one subscription. Users can also create multiple playlists, into which they can import tracks. For tracks, the platform keeps track of the number of plays and the date of the most recent play. It can also identify the role of the artist for that track. An album can be created by a collection of tracks of a single track.
