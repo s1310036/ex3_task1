@@ -7,21 +7,17 @@ const char* coin_toss() {
 }
 
 int main() {
-    char name[50];
+    srand(time(0));
+    printf("Tossing a coin...\n");
+
+    const char* results[3];
     int heads_count = 0;
     int tails_count = 0;
 
-    srand(time(NULL));
-
-    printf("Who are you?\n> ");
-    scanf("%s", name);
-    printf("Hello, %s!\n", name);
-
-    printf("Tossing a coin...\n");
-    for (int round = 1; round <= 3; round++) {
-        const char* result = coin_toss();
-        printf("Round %d: %s\n", round, result);
-        if (result == "Heads") {
+    for (int i = 0; i < 3; i++) {
+        results[i] = coin_toss();
+        printf("Round %d: %s\n", i + 1, results[i]);
+        if (results[i][0] == 'H') {
             heads_count++;
         } else {
             tails_count++;
