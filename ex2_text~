@@ -1,0 +1,7 @@
+This sequence diagram shows the sequence of events that play a song.　
+User -> Platform: playTrack(track)
+Platform -> Track: play()
+Track -> Track: incrementPlayCount()
+Track -> Track: updateLastPlayedDate()
+Track -> Platform: trackdetails
+Platform -> User: trackaudio
